@@ -1,11 +1,18 @@
 import React from "react";
-import { AppBar, Toolbar, makeStyles, IconButton } from "@material-ui/core";
+import {
+    AppBar,
+    Toolbar,
+    makeStyles,
+    IconButton,
+    Grid,
+} from "@material-ui/core";
 import Logo from "../../assets/LOGO.svg";
 import LoginIcon from "../../assets/LoginButton.svg";
 
 const useStyles = makeStyles({
     appbar: {
         background: "#FFFFFF",
+        flexGrow: 1,
     },
     logo: {
         width: 210,
@@ -14,6 +21,7 @@ const useStyles = makeStyles({
     loginicon: {
         width: 77,
         height: 77,
+        flexGrow: 1,
     },
 });
 
@@ -23,10 +31,20 @@ const Header = () => {
     return (
         <AppBar className={classes.appbar}>
             <Toolbar>
-                <img className={classes.logo} src={Logo} alt='' />
-                <IconButton>
-                    <img className={classes.loginicon} src={LoginIcon} alt='' />
-                </IconButton>
+                <Grid container justify='space-between'>
+                    <Grid item>
+                        <img className={classes.logo} src={Logo} alt='' />
+                    </Grid>
+                    <Grid item>
+                        <IconButton>
+                            <img
+                                className={classes.loginicon}
+                                src={LoginIcon}
+                                alt=''
+                            />
+                        </IconButton>
+                    </Grid>
+                </Grid>
             </Toolbar>
         </AppBar>
     );
