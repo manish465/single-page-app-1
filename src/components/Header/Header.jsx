@@ -28,7 +28,7 @@ const useStyles = makeStyles({
     },
     tabs: {
         color: "#414141",
-        fontSize: "54px",
+        fontSize: "36px",
         fontFamily: "Letter Gothic Std",
     },
 });
